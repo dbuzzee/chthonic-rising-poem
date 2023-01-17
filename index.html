@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chthonic Rising</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<body>
+    
+    <div id="text-container">
+        <p id="text"></p>
+    </div>
+      
+<script>
+    
+    const textArray = [  "Hellish Rupture",  "Earth Dungeon",  "Desire Spelunking",  "Underworld Undermine",  "Hollow Sanctuary",  "Chthonic Rising",  "Future Ruin",  "Hidden Speleothem",  "Superheated Temple",  "Lifespring Crypt"];
+
+    let textIndex = 0;
+    const textElement = document.getElementById("text");
+
+    function updateText() {
+    textElement.innerHTML = textArray[textIndex];
+    textIndex = (textIndex + 1) % textArray.length;
+    }
+
+    updateText();
+    setInterval(updateText, 3000);
+
+</script>
+</body>
+</html>
